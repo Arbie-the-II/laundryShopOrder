@@ -1,0 +1,6 @@
+{
+    "name": "user/laundry-shop-ord",
+    "require": {
+        "phpmailer/phpmailer": "^7.0"
+    }
+}
