@@ -167,7 +167,7 @@ Centralized Pricing Configuration
 Administrators can configure all pricing parameters from a dedicated pricing management page. The interface allows setting the base rate per pound for standard Wash and Fold service, defining flat-fee surcharges for Dry Cleaning and Ironing Only services, and configuring the tax rate percentage (stored as decimal but displayed as percentage for usability). Changes take effect immediately system-wide, and all existing orders retain their original pricing while new orders use the updated rates. The system validates all inputs to ensure positive values and proper number formatting.
 
 
-![Alt text for the image](images/image-10.png)
+![Alt text for the image](images/image-15.png)
 
 
 
