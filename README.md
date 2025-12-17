@@ -30,64 +30,44 @@ Scope:
 Staff User Features:
 
 *Customer registration and management with email verification support
-
 *Search functionality for existing customers by name or phone number
-
 *Comprehensive order creation with detailed washing preferences (detergent type, softener type, starch level)
-
 *Special instructions and defect logging for each order
-
 *Order tracking and status management
-
 *Order editing capabilities with automatic price recalculation
-
 *Printable receipt generation
-
 *Real-time notification system for customer verifications
 
 Admin Features:
 
 *Dashboard: Visual KPIs for total orders, completed orders, processing orders, average order value, and revenue metrics (all-time, monthly, 30-day)
-
 *Pricing Management: Configure base rates, service surcharges, and tax rates
-
 *User Management: Create, view, edit, and delete system users (staff/admin) with role-based permissions
-
 *Reports & Analytics: Interactive charts for order volume (daily/monthly), revenue analysis, service type distribution with data tables and print functionality
-
 *Customer Verification Monitoring: Notification system for tracking email verification status
 
 
 Order Processing Workflow:
 
 *Customer Registration/Selection → Order Creation with Preferences → Automatic Pricing Calculation → Status Tracking (Pending → Processing → Ready for Pickup → Completed) → Receipt Generation
-
 *Optional: Email notifications sent automatically when order status changes to "Ready for Pickup" or "Completed"
 
 
 Security Features:
 
 *Password-protected user authentication with support for username or email login
-
 *Role-based access control (Staff vs. Admin)
-
 *Password hashing using PHP's password_hash() function
-
 *Protection against self-deletion and last admin deletion
-
 *Email verification token system with 48-hour expiration
 
 
 Limitations:
 
 *Physical Service Required: While the system handles digital order management, actual laundry service and customer pickup require physical presence at the shop.
-
 *No Online Customer Portal: The system is designed for staff use only; customers cannot log in to place orders or check status themselves. All interactions occur through shop staff.
-
 *Email Dependency: Order status notifications require customers to have valid email addresses and verification. Customers without email will not receive automated updates.
-
 *No Payment Processing: The system calculates totals but does not handle actual payment transactions. Payment collection occurs manually at the shop.
-
 *Single Shop Operation: The system is designed for a single laundry shop location and does not support multi-branch operations or franchises.
 
 *No SMS Notifications: The system only supports email notifications, not SMS/text message alerts.
@@ -132,14 +112,14 @@ Order summary pages provide complete order details including customer informatio
 
 ![Alt text for the image](images/image-5.png)
 ![Alt text for the image](images/image-6.png)
-
+![Alt text for the image](images/image-7.png)
 
 Email Notification System for Order Updates
 
 The system integrates with PHPMailer to send automated email notifications to verified customers when their order status changes. When an order is updated to "Ready for Pickup" or "Completed", the system checks if the customer has a verified email address. If verified, it sends a professionally formatted HTML email with the order ID, new status, and relevant information. The email includes color-coded status displays and personalized messages. Staff receive confirmation when emails are sent successfully or warnings if delivery fails, providing transparency in the communication process.
 
 
-![Alt text for the image](images/image-7.png)
+
 
 
 Admin Management Panel & User Control
