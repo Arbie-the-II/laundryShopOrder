@@ -96,9 +96,13 @@ Security Features:
 Limitations:
 
 *Physical Service Required: While the system handles digital order management, actual laundry service and customer pickup require physical presence at the shop.
+
 *No Online Customer Portal: The system is designed for staff use only; customers cannot log in to place orders or check status themselves. All interactions occur through shop staff.
+
 *Email Dependency: Order status notifications require customers to have valid email addresses and verification. Customers without email will not receive automated updates.
+
 *No Payment Processing: The system calculates totals but does not handle actual payment transactions. Payment collection occurs manually at the shop.
+
 *Single Shop Operation: The system is designed for a single laundry shop location and does not support multi-branch operations or franchises.
 
 *No SMS Notifications: The system only supports email notifications, not SMS/text message alerts.
