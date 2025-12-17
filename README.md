@@ -22,6 +22,10 @@ To facilitate customer communication: To implement an email notification system 
 
 To provide administrative oversight and analytics: To generate comprehensive business reports including order volume analysis (daily/monthly), revenue tracking and forecasting, service type distribution analytics, key performance indicators (KPIs) display (total orders, revenue, average order value), and visual data representation through interactive charts.
 
+
+
+
+
 Scope and Limitations
 
 
@@ -30,35 +34,62 @@ Scope:
 Staff User Features:
 
 *Customer registration and management with email verification support
+
 *Search functionality for existing customers by name or phone number
+
 *Comprehensive order creation with detailed washing preferences (detergent type, softener type, starch level)
+
 *Special instructions and defect logging for each order
+
 *Order tracking and status management
+
 *Order editing capabilities with automatic price recalculation
+
 *Printable receipt generation
+
 *Real-time notification system for customer verifications
+
+
+
 
 Admin Features:
 
+
 *Dashboard: Visual KPIs for total orders, completed orders, processing orders, average order value, and revenue metrics (all-time, monthly, 30-day)
+
 *Pricing Management: Configure base rates, service surcharges, and tax rates
+
 *User Management: Create, view, edit, and delete system users (staff/admin) with role-based permissions
+
 *Reports & Analytics: Interactive charts for order volume (daily/monthly), revenue analysis, service type distribution with data tables and print functionality
+
 *Customer Verification Monitoring: Notification system for tracking email verification status
+
+
+
 
 
 Order Processing Workflow:
 
 *Customer Registration/Selection → Order Creation with Preferences → Automatic Pricing Calculation → Status Tracking (Pending → Processing → Ready for Pickup → Completed) → Receipt Generation
+
 *Optional: Email notifications sent automatically when order status changes to "Ready for Pickup" or "Completed"
+
+
+
 
 
 Security Features:
 
 *Password-protected user authentication with support for username or email login
+
+
 *Role-based access control (Staff vs. Admin)
+
 *Password hashing using PHP's password_hash() function
+
 *Protection against self-deletion and last admin deletion
+
 *Email verification token system with 48-hour expiration
 
 
@@ -119,6 +150,7 @@ Email Notification System for Order Updates
 The system integrates with PHPMailer to send automated email notifications to verified customers when their order status changes. When an order is updated to "Ready for Pickup" or "Completed", the system checks if the customer has a verified email address. If verified, it sends a professionally formatted HTML email with the order ID, new status, and relevant information. The email includes color-coded status displays and personalized messages. Staff receive confirmation when emails are sent successfully or warnings if delivery fails, providing transparency in the communication process.
 
 
+![Alt text for the image](images/image-8.png)
 
 
 
@@ -126,7 +158,7 @@ Admin Management Panel & User Control
 
 Administrators have access to a dedicated user management interface where they can view all system users in a table format showing username, full name, email, role (Staff/Admin), and creation date. The system displays roles with color-coded badges (Admin in red, Staff in teal) for easy identification. Admins can create new users with the "Add New User" button, edit existing user details (except their own role to prevent privilege escalation), and delete users with safeguards preventing self-deletion and last admin deletion. The interface provides clear feedback messages for all operations.
 
-![Alt text for the image](images/image-8.png)
+![Alt text for the image](images/image-9.png)
 
 
 
@@ -135,7 +167,7 @@ Centralized Pricing Configuration
 Administrators can configure all pricing parameters from a dedicated pricing management page. The interface allows setting the base rate per pound for standard Wash and Fold service, defining flat-fee surcharges for Dry Cleaning and Ironing Only services, and configuring the tax rate percentage (stored as decimal but displayed as percentage for usability). Changes take effect immediately system-wide, and all existing orders retain their original pricing while new orders use the updated rates. The system validates all inputs to ensure positive values and proper number formatting.
 
 
-![Alt text for the image](images/image-9.png)
+![Alt text for the image](images/image-10.png)
 
 
 
@@ -152,7 +184,7 @@ Advanced Reports & Analytics Dashboard
 
 The analytics dashboard provides comprehensive business intelligence through multiple visualizations and data tables. The top section displays KPI cards showing total completed orders, total revenue (all-time), and average order value with color-coded borders. Interactive bar charts visualize order volume and revenue trends with toggle buttons allowing staff to switch between daily and monthly views. A pie chart displays service type distribution with percentages. Detailed data tables below provide raw data for daily order counts, revenue breakdown by date, and service type analysis. The dashboard includes a print button that generates printer-friendly reports with proper page breaks and styling.
 
-![Alt text for the image](images/image-10.png)
+![Alt text for the image](images/image-13.png)
 
 
 
@@ -183,7 +215,7 @@ System Initialization & First-Time Setup
 The system includes intelligent first-run detection that checks if any users exist in the database. When the system is accessed for the first time with zero users, it automatically redirects to a special setup page instead of the login screen. This setup page forces the creation of the first administrator account with the admin role locked (cannot be changed to staff). After successful setup, the system redirects to the login page with a success message confirming initialization. This ensures the system is always secure and cannot be accessed without proper authentication, while also providing a smooth onboarding experience for new installations.
 
 
-![Alt text for the image](images/image-13.png)
+![Alt text for the image](images/image-14.png)
 
 
 
