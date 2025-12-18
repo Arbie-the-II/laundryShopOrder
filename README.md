@@ -1,4 +1,3 @@
-Elizabeth Arbie D. Morales   BSCS 2 
 Laundry Shop Order System
 
 Project Context
